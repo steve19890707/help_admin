@@ -304,7 +304,8 @@ export const Slot = () => {
                 content: `確定取消? 尚未儲存的資料將會遺失。`,
                 type: "slotEditClose",
                 param: () => {
-                  window.location.href = window.location.origin + `#/slot`;
+                  window.location.href =
+                    window.location.origin + `/help_admin/#/slot`;
                   dispatch(setEditReset());
                   dispatch(setLineContentFirstInit(true));
                   localStorage.removeItem("lines");
