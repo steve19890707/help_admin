@@ -100,17 +100,17 @@ export const RenderGetDataHook = ({
 }) => {
   const userInfo = useSelector((state) => state.userInfo);
   useEffect(() => {
-    const noLogin = localStorage.getItem("isLogin") === "false";
-    if (noLogin && window.location.hash !== "#/login") {
-      window.location.href = window.location.origin + "#/login";
-    }
-    if (userInfo.level === "none" || noLogin) {
-      return;
-    }
-    if (isPermission && userInfo.level !== 2) {
-      return (window.location.href =
-        window.location.origin + window.location.pathname + `#/`);
-    }
+    // const noLogin = localStorage.getItem("isLogin") === "false";
+    // if (noLogin && window.location.hash !== "#/login") {
+    //   window.location.href = window.location.origin + "#/login";
+    // }
+    // if (userInfo.level === "none" || noLogin) {
+    //   return;
+    // }
+    // if (isPermission && userInfo.level !== 2) {
+    //   return (window.location.href =
+    //     window.location.origin + window.location.pathname + `#/`);
+    // }
     const defaultData = isMap ? {} : [];
     setData({
       data: defaultData,

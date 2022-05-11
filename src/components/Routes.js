@@ -28,7 +28,7 @@ export const TotalRoute = () => {
             )
           }
         /> */}
-        <Route path="*" element={<Navigate to="/login" />} />
+        <Route path="*" element={<Navigate to="/slot" />} />
       </Routes>
     </Layout>
   );
